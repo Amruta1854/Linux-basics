@@ -1,0 +1,27 @@
+Security-Enhanced Linux (SELinux) is a security architecture for Linux systems that allows administrators to have more control over who can access the system. 
+
+It was originally developed by the United States National Security Agency (NSA) as a series of patches to the Linux kernel using Linux Security Modules (LSM). 
+
+It acts as protective agent on servers.
+
+SELinux is the security implementation which enhances system security and in the event of security breach, it stops that from spreading in entire system.
+
+If SELinux is enabled, hackers will not be able to access the other services available on sever as well as they will not be able to write anything in /tmp or /var/tmp directory.
+
+#Mode of SeLinux :
+SELinux works in three modes; Disable, Permissive and Enforcing. In disable mode SELinux remains completely disable. If SELinux is enabled, it will be in either Permissive mode or in Enforcing mode.
+In permissive mode SELinux will only monitor the interaction. In enforcing mode SELinux will also filter the interaction with monitoring.
+
+1) Enforcing  - Enforcing mode is the default mode at installation of SELinux. It will enforce the policies on the system, deny access and log actions.
+2) Permissive - Permissive mode is the most commonly used mode for troubleshooting SELinux. In this mode, SELinux enables but does not enforce security policies. Also, this means that actions will result in a warning and log for the system administrator.
+3) Disabled   - Disabled mode means that SELinux is turned off and the security policies do not protect the server.
+
+#SELINUX= can take one of these three values:
+        enforcing  - SELinux security policy is enforced.
+        permissive - SELinux prints warnings instead of enforcing.
+        disabled   - No SELinux policy is loaded.
+
+#SELINUXTYPE= can take one of these two values:
+       targeted - Targeted processes are protected,
+       mls      - Multi Level Security protection.
+
