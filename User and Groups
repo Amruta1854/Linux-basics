@@ -1,11 +1,14 @@
-Linix operating systems have the ability to multitask in a manner similar to other operating systems. However, Linux’s major difference from other operating systems is its ability to have multiple users. Linux was designed to allow more than one user to have access to the system at the same time.
+Linix operating systems have the ability to multitask in a manner similar to other operating systems. However, Linux’s major difference from other operating systems is its ability to have multiple users. 
+Linux was designed to allow more than one user to have access to the system at the same time.
 In order for this multiuser design to work properly, there needs to be a method to protect users from each other. This is where permissions come in to play.
 
 Read, Write, & Execute Permissions :
 
 Read: a readable permission allows the contents of the file to be viewed. A read permission on a directory allows you to list the contents of a directory.
 Write: a write permission on a file allows you to modify the contents of that file. For a directory, the write permission allows you to edit the contents of a directory (e.g. add/delete files).
-Execute: for a file, the executable permission allows you to run the file and execute a program or script. For a directory, the execute permission allows you to change to a different directory and make it your current working directory. Users usually have a default group, but they may belong to several additional groups.
+Execute: for a file, the executable permission allows you to run the file and execute a program or script. For a directory, 
+         the execute permission allows you to change to a different directory and make it your current working directory. 
+         Users usually have a default group, but they may belong to several additional groups.
 
 1) Users :
           -Users in Linux plays an important role in the efficient management of the privileges. 
