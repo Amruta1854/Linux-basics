@@ -19,29 +19,29 @@ ls -l -> it displays various information related to file permission
 #File Access Modes :
 The permissions of a file are the first line of defense in the security of a Unix system. The basic building blocks of Unix permissions are the read, write, and execute permissions, which have been described below :
 
-       1)Read : Grants the capability to read, i.e., view the contents of the file.
+       1)Read (4) : Grants the capability to read, i.e., view the contents of the file.
 
-       2)Write : Grants the capability to modify, or remove the content of the file.
+       2)Write (2) : Grants the capability to modify, or remove the content of the file.
 
-       3)Execute : User with execute permissions can run a file as a program.
+       3)Execute (1): User with execute permissions can run a file as a program.
        
 #Changing Permissions :
 chmod -> To change the file or the directory permissions 
 
 #Using chmod with Absolute Permissions :
 
-	No permission	                      ---
-	Execute permission	                --x
-	Write permission	                  -w-
+	No permission	                    ---
+	Execute permission	            --x
+	Write permission	            -w-
 	Execute and write permission:       -wx
-  1 (execute) + 2 (write) = 3	
+         1 (e) + 2 (w) = 3	
 	Read permission	                    r--
 	Read and execute permission:        r-x
-  4 (read) + 1 (execute) = 5	
+         4 (r) + 1 (e) = 5	
 	Read and write permission:          rw-
-  4 (read) + 2 (write) = 6	
+         4 (r) + 2 (w) = 6	
 	All permissions:                    rwx 
-  4 (r) + 2 (w) + 1 (e) = 7	
+         4 (r) + 2 (w) + 1 (e) = 7	
 
 #Changing Owners and Groups :
 While creating an account on Unix, it assigns a owner ID and a group ID to each user. All the permissions mentioned above are also assigned based on the Owner and the Groups.
