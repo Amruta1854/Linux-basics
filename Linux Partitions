@@ -1,0 +1,62 @@
+1. Open a terminal window (select Applications > Accessories > Terminal). 
+   Switch to the root user use the sudo command:
+   $ sudo fdisk -l
+   
+2. If no devices are given, those mentioned in /proc/partitions (if that exists) are used. 
+   You can specify device name as follows (in this example list partitions for /dev/sda):
+   # fdisk -l   
+   
+3. The sfdisk command act as a partition table manipulator for Linux. You can use this tool to list partitions too:
+   # sfdisk -l /dev/sda
+   # sfdisk -lu /dev/sda
+   # sfdisk -ls /dev/sda   
+   
+   Where,
+   -l : List the partitions of a device.
+   -s : List the size of a partition.
+   -u or -uS or -uB or -uC or -uM : Accept or report in units of sectors (blocks, cylinders, megabytes, respecpively). 
+                                    The default is cylinders, at least when the geometry is known   
+ 
+4. Listing Linux a Partition Size Larger Than 2TB
+   The fdisk or sfdisk command will not list any partition size larger than 2TB. 
+   To solve this problem you need to use GNU parted command with GPT partitions. It supports Intel EFI/GPT partition tables.
+   EFI uses GPT where BIOS uses a Master Boot Record (MBR). In this example list partitions on /dev/sdb using the parted command:
+   # parted /dev/sdb
+   
+5. GNU/Linux parted prompt:
+   GNU Parted 3.3
+   Using /dev/sdb
+   Welcome to GNU Parted! Type 'help' to view a list of commands.
+   (parted)
+   
+6. Set unit type to TB or GB by typing ‘unit TB‘ or ‘unit GB‘ at the (parted) prompt:
+   (parted) unit TB
+   OR
+   (parted) unit GB
+
+7. To list partitions type print command at the (parted) prompt:
+   (parted) print  
+   
+8. To exit from parted session type ‘quit’ at the (parted) prompt:
+   (parted) quit
+
+9. Pass the -l OR –list option to the parted command to lists partition layout on all block devices:
+   # parted -l   
+   
+10.Use the lsscsi command to show SCSI devices (or hosts) and their attributes:
+   # lsscsi 
+   
+11.We can use the hwinfo command to probe for hardware as follows:
+   hwinfo | more
+   hwinfo --block | more
+   hwinfo --block --short
+   inxi -P
+   inxi -p | more
+   
+12.blog post and man pages by typing the following man command:
+   man fdisk
+   man lsblk
+   man sfdisk
+   man parted   
+   
+   
