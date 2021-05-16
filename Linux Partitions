@@ -1,3 +1,10 @@
+LINUX PARTITION:-
+The process of dividing a disk into logical areas that can be worked with separately is called partitioning. 
+Disk partitioning is done to subdivide the disk into pieces with broadly different purposes. 
+There are several reasons why you want to use partitioning: multiple operating systems on the same disk.
+Partitioning allows the use of different filesystems to be installed for different kinds of files. 
+Separating user data from system data can prevent the system partition from becoming full and rendering the system unusable. Partitioning can also make backing up easier.
+
 1. Open a terminal window (select Applications > Accessories > Terminal). 
    Switch to the root user use the sudo command:
    $ sudo fdisk -l
